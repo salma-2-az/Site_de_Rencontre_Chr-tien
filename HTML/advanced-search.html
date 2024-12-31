@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche Avancée - ChristianUnion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="advanced-search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">
+                <img src="logo.webp" alt="ChristianUnion">
+            </a>
+            <div class="nav-links">
+                <a href="profiles.html">Découvrir</a>
+                <a href="matches.html">Mes Matches</a>
+                <a href="messages.html">Messages</a>
+                <a href="events.html">Événements</a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="profile-menu">
+                <img src="images/default-avatar.png" alt="Profile" class="avatar">
+                <div class="dropdown-menu">
+                    <a href="my-profile.html"><i class="fas fa-user"></i> Mon Profil</a>
+                    <a href="settings.html"><i class="fas fa-cog"></i> Paramètres</a>
+                    <a href="premium.html"><i class="fas fa-crown"></i> Devenir Premium</a>
+                    <a href="help.html"><i class="fas fa-question-circle"></i> Aide</a>
+                    <hr>
+                    <a href="logout.html" class="logout"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section de Recherche Avancée -->
+    <div class="search-container">
+        <h1>Recherche Avancée</h1>
+        <form id="advancedSearchForm" class="search-form">
+            <div class="form-group">
+                <label for="ageRange">Âge</label>
+                <select id="ageRange" name="ageRange">
+                    <option value="">Sélectionnez une tranche d'âge</option>
+                    <option value="18-25">18-25 ans</option>
+                    <option value="26-35">26-35 ans</option>
+                    <option value="36-45">36-45 ans</option>
+                    <option value="46+">46 ans et plus</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Localisation</label>
+                <input type="text" id="location" name="location" placeholder="Ville, Pays">
+            </div>
+
+            <div class="form-group">
+                <label for="maritalStatus">Statut Marital</label>
+                <select id="maritalStatus" name="maritalStatus">
+                    <option value="">Sélectionnez un statut</option>
+                    <option value="celibataire">Célibataire</option>
+                    <option value="marie">Marié(e)</option>
+                    <option value="divorce">Divorcé(e)</option>
+                    <option value="veuf">Veuf/Veuve</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="values">Valeurs Chrétiennes</label>
+                <select id="values" name="values">
+                    <option value="">Sélectionnez des valeurs</option>
+                    <option value="priere">Prière</option>
+                    <option value="bonté">Bonté</option>
+                    <option value="service">Service</option>
+                    <option value="foi">Foi</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="educationLevel">Niveau d'Études</label>
+                <select id="educationLevel" name="educationLevel">
+                    <option value="">Sélectionnez votre niveau</option>
+                    <option value="bac">Bac</option>
+                    <option value="licence">Licence</option>
+                    <option value="master">Master</option>
+                    <option value="doctorat">Doctorat</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="church">Église Fréquentée</label>
+                <input type="text" id="church" name="church" placeholder="Nom de l'église">
+            </div>
+
+            <button type="submit" class="btn btn-search">Rechercher</button>
+        </form>
+
+        <div class="results-container">
+            <h2>Résultats de la Recherche</h2>
+            <div class="results-grid">
+                <!-- Exemple de carte de profil dans les résultats -->
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="images/blurred-profile.jpg" alt="Profile" class="blurred">
+                    </div>
+                    <div class="profile-info">
+                        <h3>Mohamed K, 28 ans</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+                        <p><i class="fas fa-church"></i> Église Baptiste</p>
+                        <button class="btn-view">Voir le profil</button>
+                    </div>
+                </div>
+                <!-- Répéter pour d'autres profils -->
+            </div>
+        </div>
+    </div>
+
+    <script src="advanced-search.js"></script>
+</body>
+</html>

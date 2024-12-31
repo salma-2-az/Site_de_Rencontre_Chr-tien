@@ -1,0 +1,27 @@
+.terms-container {
+    padding: 2rem 5%;
+    background: #f8f9fa;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+h2 {
+    margin-top: 1.5rem;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 1rem;
+    }
+}

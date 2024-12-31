@@ -1,0 +1,85 @@
+.dashboard-container {
+    padding: 2rem 5%;
+    background: #f8f9fa;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    flex: 1;
+    margin: 0 1rem;
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.btn-view {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view:hover {
+    background: #2d4373;
+}
+
+.recent-activity {
+    margin-top: 2rem;
+}
+
+.recent-activity h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+table th {
+    background: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .dashboard-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        margin: 1rem 0;
+    }
+}

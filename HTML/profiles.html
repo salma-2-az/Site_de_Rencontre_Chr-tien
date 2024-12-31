@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découvrez des Célibataires Chrétiens - ChristianUnion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profiles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation améliorée -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">
+                <img src="logo.webp" alt="ChristianUnion">
+            </a>
+            <div class="nav-links">
+                <a href="profiles.html" class="active">Découvrir</a>
+                <a href="matches.html">Mes Matches</a>
+                <a href="messages.html">Messages</a>
+                <a href="events.html">Événements</a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="notifications">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+            </div>
+            <div class="profile-menu">
+                <img src="images/default-avatar.png" alt="Profile" class="avatar">
+                <div class="dropdown-menu">
+                    <a href="my-profile.html"><i class="fas fa-user"></i> Mon Profil</a>
+                    <a href="settings.html"><i class="fas fa-cog"></i> Paramètres</a>
+                    <a href="premium.html"><i class="fas fa-crown"></i> Devenir Premium</a>
+                    <a href="help.html"><i class="fas fa-question-circle"></i> Aide</a>
+                    <hr>
+                    <a href="logout.html" class="logout"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Filtres avancés -->
+    <div class="filters-container">
+        <div class="filters-header">
+            <div class="gender-toggle">
+                <button class="active" data-gender="F">
+                    <i class="fas fa-venus"></i> Femmes
+                </button>
+                <button data-gender="M">
+                    <i class="fas fa-mars"></i> Hommes
+                </button>
+            </div>
+            <button class="advanced-filters-toggle">
+                <i class="fas fa-sliders-h"></i> Filtres avancés
+            </button>
+        </div>
+
+        <div class="search-filters">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Rechercher par nom, ville, église...">
+            </div>
+            
+            <div class="basic-filters">
+                <select name="age-range">
+                    <option value="">Âge</option>
+                    <option value="18-25">18-25 ans</option>
+                    <option value="26-35">26-35 ans</option>
+                    <option value="36-45">36-45 ans</option>
+                    <option value="46+">46+ ans</option>
+                </select>
+
+                <select name="location">
+                    <option value="">Localisation</option>
+                    <option value="paris">Paris</option>
+                    <option value="lyon">Lyon</option>
+                    <option value="marseille">Marseille</option>
+                </select>
+
+                <select name="distance">
+                    <option value="">Distance</option>
+                    <option value="5">5 km</option>
+                    <option value="10">10 km</option>
+                    <option value="25">25 km</option>
+                    <option value="50">50 km</option>
+                    <option value="100">100 km</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Filtres avancés (initialement cachés) -->
+        <div class="advanced-filters hidden">
+            <div class="filter-group">
+                <h4>Spiritualité</h4>
+                <select name="denomination">
+                    <option value="">Dénomination</option>
+                    <option value="baptiste">Baptiste</option>
+                    <option value="pentecotiste">Pentecôtiste</option>
+                    <option value="evangelique">Évangélique</option>
+                    <option value="catholique">Catholique</option>
+                </select>
+                <select name="frequency">
+                    <option value="">Fréquence à l'église</option>
+                    <option value="regular">Régulière</option>
+                    <option value="occasional">Occasionnelle</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <h4>Profil</h4>
+                <select name="education">
+                    <option value="">Niveau d'études</option>
+                    <option value="bac">Bac</option>
+                    <option value="licence">Licence</option>
+                    <option value="master">Master</option>
+                    <option value="doctorat">Doctorat</option>
+                </select>
+                <select name="status">
+                    <option value="">Situation</option>
+                    <option value="celibataire">Célibataire</option>
+                    <option value="divorce">Divorcé(e)</option>
+                    <option value="veuf">Veuf/Veuve</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <h4>Préférences</h4>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="has_photo">
+                        Avec photo uniquement
+                    </label>
+                    <label>
+                        <input type="checkbox" name="online">
+                        En ligne uniquement
+                    </label>
+                    <label>
+                        <input type="checkbox" name="verified">
+                        Profils vérifiés
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Résultats et tri -->
+    <div class="results-header">
+        <div class="results-count">
+            <span>256 profils trouvés</span>
+        </div>
+        <div class="sort-options">
+            <label>Trier par :</label>
+            <select name="sort">
+                <option value="recent">Plus récents</option>
+                <option value="distance">Distance</option>
+                <option value="age">Âge</option>
+                <option value="compatibility">Compatibilité</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Grille des profils améliorée -->
+    <div class="profiles-grid">
+        <!-- Exemple de carte de profil améliorée -->
+        <div class="profile-card">
+            <div class="profile-image">
+                <img src="images/blurred-profile.jpg" alt="Profile" class="blurred">
+                <div class="premium-overlay">
+                    <i class="fas fa-lock"></i>
+                    <p>Photo accessible aux membres Premium</p>
+                </div>
+                <div class="online-status active">
+                    <span class="dot"></span> En ligne
+                </div>
+                <div class="profile-badges">
+                    <span class="badge verified" title="Profil vérifié">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                    <span class="badge premium" title="Membre Premium">
+                        <i class="fas fa-crown"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="profile-info">
+                <div class="profile-header">
+                    <h3>Marie K., 28</h3>
+                    <button class="favorite-btn">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="profile-details">
+                    <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+                    <p><i class="fas fa-church"></i> Église Baptiste</p>
+                    <p><i class="fas fa-graduation-cap"></i> Master en Communication</p>
+                </div>
+
+                <div class="compatibility">
+                    <div class="compatibility-score">
+                        <span>85%</span>
+                        <label>compatibilité</label>
+                    </div>
+                    <div class="common-interests">
+                        <span class="interest">Prière</span>
+                        <span class="interest">Musique</span>
+                        <span class="more">+3</span>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <button class="btn-view">
+                        <i class="fas fa-user"></i> Voir le profil
+                    </button>
+                    <button class="btn-contact" disabled>
+                        <i class="fas fa-crown"></i> Contacter
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Répéter pour d'autres profils -->
+    </div>
+
+    <!-- Pagination améliorée -->
+    <div class="pagination">
+        <button class="prev-page" disabled>
+            <i class="fas fa-chevron-left"></i> Précédent
+        </button>
+        <div class="page-numbers">
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <span>...</span>
+            <button>12</button>
+        </div>
+        <button class="next-page">
+            Suivant <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Modal de profil détaillé amélioré -->
+    <!-- (Le code du modal reste similaire mais avec plus de détails) -->
+</body>
+</html>

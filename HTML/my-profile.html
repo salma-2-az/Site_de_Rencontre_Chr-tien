@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Compte - ChristianUnion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="my-profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">
+                <img src="logo.webp" alt="ChristianUnion">
+            </a>
+            <div class="nav-links">
+                <a href="profiles.html">Découvrir</a>
+                <a href="matches.html">Mes Matches</a>
+                <a href="messages.html">Messages</a>
+                <a href="events.html">Événements</a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="profile-menu">
+                <img src="images/default-avatar.png" alt="Profile" class="avatar">
+                <div class="dropdown-menu">
+                    <a href="my-profile.html" class="active"><i class="fas fa-user"></i> Mon Profil</a>
+                    <a href="settings.html"><i class="fas fa-cog"></i> Paramètres</a>
+                    <a href="premium.html"><i class="fas fa-crown"></i> Devenir Premium</a>
+                    <a href="help.html"><i class="fas fa-question-circle"></i> Aide</a>
+                    <hr>
+                    <a href="logout.html" class="logout"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section de Profil Personnel -->
+    <div class="profile-container">
+        <h1>Mon Compte</h1>
+        <form id="profileForm" class="profile-form">
+            <div class="form-group">
+                <label for="fullName">Nom et Prénom</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Votre nom complet" required>
+            </div>
+
+            <div class="form-group">
+                <label for="birthDate">Date de Naissance</label>
+                <input type="date" id="birthDate" name="birthDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Lieu de Résidence</label>
+                <input type="text" id="location" name="location" placeholder="Ville, Pays" required>
+            </div>
+
+            <div class="form-group">
+                <label for="occupation">Activité Professionnelle</label>
+                <input type="text" id="occupation" name="occupation" placeholder="Votre activité" required>
+            </div>
+
+            <div class="form-group">
+                <label for="education">Niveau d'Études</label>
+                <select id="education" name="education">
+                    <option value="">Sélectionnez votre niveau</option>
+                    <option value="bac">Bac</option>
+                    <option value="licence">Licence</option>
+                    <option value="master">Master</option>
+                    <option value="doctorat">Doctorat</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="church">Église Fréquentée</label>
+                <input type="text" id="church" name="church" placeholder="Nom de l'église" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pastor">Pasteur</label>
+                <input type="text" id="pastor" name="pastor" placeholder="Nom du pasteur" required>
+            </div>
+
+            <div class="form-group">
+                <label for="preferences">Préférences de Recherche</label>
+                <div class="preferences">
+                    <label for="agePreference">Âge</label>
+                    <input type="text" id="agePreference" name="agePreference" placeholder="Ex: 25-35">
+                </div>
+                <div class="preferences">
+                    <label for="locationPreference">Localisation</label>
+                    <input type="text" id="locationPreference" name="locationPreference" placeholder="Ville, Pays">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="profilePicture">Photo de Profil</label>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+                <div class="preview">
+                    <img id="previewImage" src="images/default-avatar.png" alt="Aperçu de la photo" />
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-save">Enregistrer les Modifications</button>
+        </form>
+    </div>
+
+    <script src="my-profile.js"></script>
+</body>
+</html>
